@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import ShoppingList from './ShoppingList'; // assuming this is a component you've defined
-import itemData from './itemData'; // assuming this is an array of data for the ShoppingList component
+import itemData from '../data/items'; // assuming this is an array of data for the ShoppingList component
 
-function App() {
+  function App() {
   // State variable to store the current mode, initially set to "light"
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -20,7 +20,7 @@ function App() {
         <h2>Shopster</h2>
         {/* Button for toggling dark mode */}
         <button onClick={handleModeToggle}>
-          {isDarkMode ? "Light Mode" : "Dark Mode"}
+          {isDarkMode ? "Dark Mode" : "Light Mode"}
         </button>
       </header>
       <ShoppingList items={itemData} />
